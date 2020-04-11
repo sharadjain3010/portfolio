@@ -1,13 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
+import './main-content.scss';
 
-function Maincontent(){
+class Maincontent extends Component{
+    constructor(){
+        super();
+    }
+    skills = {
+        
+    }
+    personalDetails = {
+        name: 'sharad jain',
+        email: 'sharadjain3010@gmail.com',
+        phone: '7898271531',
+        dob: '30/10/1993',
+        nationality: 'indian'
+    }
+
+    render(){
         return (
             <main>
-                <div id="intro" className="contentSec section container-fluid">
-                    <div className="sectionWrapper">
-                        <h1 className="heading 1 blackFont">about me</h1>
-                        <p className="description blackFont">Hello, I'm a Frontend Developer with close interest in User Interface designing from Pune, India. I hold a bachlers degree of Engineering in Information Technology.</p>
-                        <div className="userInfo">
+                <div id="intro" className="section container-fluid">
+                    <div className="sectionWrapper blackFont">
+                        <h1 className="heading">about me</h1>
+                        <p className="description">Hello, I'm a Frontend Developer with close interest in User Interface designing from Pune, India. I have around 4 yrs of experience and hold a bachlers degree of Engineering in Information Technology.</p>
+                        <div className="userInfo content">
                             <div className="userDetail">
                                 <ul>
                                     <li>
@@ -31,7 +47,7 @@ function Maincontent(){
                                         <label>indian</label>
                                     </li>
                                 </ul>
-                                <a href="#" download className="downloadButton">download resume</a>
+                                <a href="../../assets/Sharad_Jain.pdf" download className="downloadButton">download resume</a>
                             </div>
                             <div className="userImg">
                                 <label></label>
@@ -39,11 +55,11 @@ function Maincontent(){
                         </div>
                     </div>    
                 </div>
-                <div id="skills" className="contentSec section container-fluid parallex-effect">
-                    <div className="sectionWrapper">
-                        <h1 className="heading 2">Skills</h1>
-                        <p className="description whiteFont">Responsive webdesign is what’s shaping the online experience now. The internet is now a platform of services and I have the skills to offer your visitors the optimal viewing experience, regardless of the device they choose.It is much more than just adjusting screen resolutions and using automatically resizable images.</p>
-                        <div className='skills'>
+                <div id="skills" className="section container-fluid">
+                    <div className="sectionWrapper whiteFont">
+                        <h1 className="heading">Skills</h1>
+                        <p className="description">Responsive webdesign is what’s shaping the online experience now. The internet is now a platform of services and I have the skills to offer your visitors the optimal viewing experience, regardless of the device they choose.It is much more than just adjusting screen resolutions and using automatically resizable images.</p>
+                        <div className='skills content'>
                             <ul>
                                 <li className='skillrow'>
                                     <span>web tech</span>
@@ -90,50 +106,74 @@ function Maincontent(){
                         </div>
                     </div>    
                 </div>
-                <div id="experience" className="contentSec section container-fluid">
-                    <div className="sectionWrapper">
-                        <h1 className="heading 4 blackFont">experience</h1>
-                        <p className="description blackFont">Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-                        <div className="eduContainer">
+                <div id="experience" className="section container-fluid">
+                    <div className="sectionWrapper blackFont" >
+                        <h1 className="heading">experience</h1>
+                        <p className="description">I have an experience working with many clients from different different domains and has understanding of various industries and their terminology. I have sucessfully completed several project while working for organizations.</p>
+                       <div className='content row'>
+                            <div className=" card col-sm-offset-1 col-sm-12 col-md-6 col-lg-4" >
+                                <ul>
+                                    <li>cognizant technology solutions</li>
+                                    <li><span>experience</span>
+                                        <span>1 yr</span></li>
+                                    <li><span>technology</span>
+                                        <span>front end development</span></li>
+                                    <li><span>position</span>
+                                        <span>Senior front end developer</span></li>
+                                </ul>
+                            </div>
+                            <div className=" card col-sm-offset-1 col-sm-12 col-md-6 col-lg-4" >
                             <ul>
                                 <li>tata consultancy sevices</li>
                                 <li><span>experience</span>
-                                    <span>2 yrs</span></li>
+                                    <span>3 yrs 3 months</span></li>
                                 <li><span>technology</span>
                                     <span>front end development</span></li>
                                 <li><span>position</span>
                                     <span>front end developer</span></li>
                             </ul>
                         </div>
+                       </div>
                     </div>
                 </div>
-                <div id="education" className="contentSec section container-fluid">
-                    <div className="sectionWrapper">
-                        <h1 className="heading 3 whiteFont">Education</h1>
-                        <p className="description whiteFont">Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-                        <div className="eduContainer">
-                            <ul>
-                                <li>graduation</li>
-                                <li><span>college</span>
-                                    <span>guru ramdas khalsa institute of science and technology</span></li>
-                                <li><span>stream</span>
-                                    <span>Information technology</span></li>
-                                <li><span>batch  </span>
-                                    <span>2011-15</span></li>
-                            </ul>
+                <div id="education" className="section container-fluid">
+                    <div className="sectionWrapper whiteFont">
+                        <h1 className="heading ">Education</h1>
+                        <p className="description ">Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                        <div className="content">
+                            <div className='card col-sm-12 col-md-6 '>
+                                <ul>
+                                    <li>graduation</li>
+                                    <li><span>college</span>
+                                        <span>guru ramdas khalsa institute of science and technology</span></li>
+                                    <li><span>stream</span>
+                                        <span>Information technology</span></li>
+                                    <li><span>batch  </span>
+                                        <span>2011-15</span></li>
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <div id="connect" className="contentSec section container-fluid">
+                <div id="connect" className="section container-fluid">
                     <div className="sectionWrapper">
-                        <span className="subHeading">LET'S MAKE SOMETHING AWESOME TOGETHER. GET IN</span>
-                        <h1 className="heading 5">Contact</h1>
-                        
+                        <h1 className="heading">Contact</h1>
+                        <p className="description ">LET'S MAKE SOMETHING AWESOME TOGETHER. GET IN CONTACT</p>
+                        <div className='content contact'>
+                            <form className='ConatctForm'>
+                                <input placeholder='' className='controls' type='text' name=''/>
+                                <input placeholder='Subject' className='controls' type='text' name=''/>
+                                <textarea placeholder='Amazing IDEA' className='controls'></textarea>
+                                <button className='controls'>let's connect<span className='sendIcon'></span></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </main>
         );
     }
+}
 
 
 export default Maincontent;
