@@ -42,11 +42,11 @@ class Navigation extends Component {
                         </div>
                         <ul className="nav navbar-nav">
                         
-                            <li><Link to='/'>About Me</Link></li>
-                            <li><Link to='/Skill'>Skills</Link></li>
-                            <li><Link to='/Experience'>Employment</Link></li>
-                            <li><Link to='/Education'>Education</Link></li>
-                            <li><Link to='/Contact'>Contact</Link></li>
+                            <li><Link to='./'>About Me</Link></li>
+                            <li><Link to='./Skill'>Skills</Link></li>
+                            <li><Link to='./Experience'>Employment</Link></li>
+                            <li><Link to='./Education'>Education</Link></li>
+                            <li><Link to='./Contact'>Contact</Link></li>
                         </ul>
                         <div className="socialLinks">
                             <a target="_blank" href="https://www.facebook.com" className="fa fa-facebook"></a>
