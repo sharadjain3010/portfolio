@@ -5,15 +5,18 @@ import { Link} from 'react-router-dom';
 class Navigation extends Component {
     constructor(props){
         super();
-        console.log(`props from parent - ${props}`);
+        console.log(`props from parent - ${props.isMobile}`);
         this.state = {isToggle: false};
         this.toggleNavbar = this.toggleNavbar.bind(this);
     }
 
     toggleNavbar(){
-        this.setState((state)=>({
-            isToggle: !state.isToggle
-        }));
+        this.setState({
+            isToggle: !this.state.isToggle,
+        },
+        ()=>{
+            this.toggleBackdrop()
+        });
     }
 
     toggleBackdrop(){

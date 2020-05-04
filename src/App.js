@@ -8,8 +8,8 @@ class App extends Component {
   constructor(){
     super();
     this.state =  {isMobileOn: false};
-    let isMobile = window.screen.width < 992 ? true : false;
-    // this.setMobileMode(isMobile);
+    let isMobile = window.screen.width < 992 ? this.state =  {isMobileOn: true} : false;
+
     window.addEventListener('resize',(event)=>{
       isMobile = event.target.screen.width < 992 ? true : false;
       this.setMobileMode(isMobile);
