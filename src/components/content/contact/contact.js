@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
+import './contact.scss';
 
 class Contact extends Component{
     constructor(){
-        super()
+        super();
+        this.state = {
+            name: '',
+            subject: '',
+            emailId:'',
+            description: ''
+        }
     }
 
     render(){

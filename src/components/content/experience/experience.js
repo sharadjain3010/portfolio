@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './experience.scss';
 
 class Experience extends Component{
     constructor(){
@@ -10,7 +11,7 @@ class Experience extends Component{
             <div id="experience" className="section container-fluid">
                 <div className="sectionWrapper blackFont" >
                     <h1 className="heading">experience</h1>
-                    <p className="description">I have an experience working with many clients from different different domains and has understanding of various industries and their terminology. I have sucessfully completed several project while working for organizations.</p>
+                    <p className="description">I have an experience working with enterprise level web applications with latest web technologies and web standards and sucessfully completed several projects while working for organizations.</p>
                     <div className='content row'>
                         <div className=" card col-sm-offset-1 col-sm-12 col-md-6 col-lg-4" >
                             <ul>

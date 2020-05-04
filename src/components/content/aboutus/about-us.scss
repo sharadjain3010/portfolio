@@ -1,0 +1,68 @@
+@import '../../../common/styles/variables.scss';
+
+#intro {
+  background-color: $bg-color-shade1;
+  position: relative;
+
+  .userInfo{
+      color: $black-color;
+      text-transform: capitalize;
+      display: flex;
+
+      .userDetail{
+
+        ul {
+          padding: 0;
+          list-style: none;
+          margin: 100px 100px 50px 100px;
+
+          li {
+            padding: 10px 0 10px 0;
+            border-bottom: 1px solid $grey-shade;
+            display: flex;
+
+            label {
+              width: 50%;
+              font-weight: 600;
+            }
+          }
+        }
+
+        a.downloadButton {
+          margin: 10px 0 0 100px;
+          text-transform: uppercase;
+          text-decoration: none;
+          border: 1px solid $black-color;
+          padding: 13px 50px;
+          color: $black-color;
+          font-family: 'Roboto-Bold', sans-serif;
+          font-size: 16px;
+          transition: background .3s ease, color .3s ease;
+
+          &:hover,
+          &:focus {
+            color: $white-Color;
+            background: $black-color;
+            transition: all .3s ease;
+          }
+        }
+      }
+
+      .userImg {
+        width: 50%;
+        margin: 0 0 35px 0;
+        vertical-align: text-top;
+        padding: 48px 0 0 106px;
+
+        label {
+          background: url(../../../assets/Images/userImage.jpg) no-repeat;
+          width: 400px;
+          height: 400px;
+          background-position: 84% 18%;
+          display: inline-block;
+          background-size: 179% 119%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }

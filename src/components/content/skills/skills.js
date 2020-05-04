@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './skills.scss';
 
 class Skill extends Component{
     constructor(){
@@ -12,10 +13,10 @@ class Skill extends Component{
                     <h1 className="heading">Skills</h1>
                     <p className="description">Responsive webdesign is what’s shaping the online experience now. The internet is now a platform of services and I have the skills to offer your visitors the optimal viewing experience, regardless of the device they choose.It is much more than just adjusting screen resolutions and using automatically resizable images.</p>
                     <div className='skills content'>
-                        <ul>
-                            <li className='skillrow'>
-                                <span>web tech</span>
-                                <ul>
+                        <ul className=''>
+                            <li className='skillrow d-flex flex-column flex-md-row'>
+                                <span className='col-md-4'>web tech</span>
+                                <ul className='col-md-8 justify-content-md-end justify-content-start'>
                                     <li>Javascript</li>
                                     <li>HTML5</li>
                                     <li>CSS3</li>
@@ -25,9 +26,9 @@ class Skill extends Component{
                                     <li>TypeScript</li>
                                 </ul>
                             </li>
-                            <li className='skillrow'>
-                                <span>frameworks</span>
-                                <ul>
+                            <li className='skillrow d-flex flex-column flex-md-row'>
+                                <span className='col-md-4'>frameworks</span>
+                                <ul className='col-md-8 justify-content-md-end justify-content-start'>
                                     <li>angular</li>
                                     <li>react</li>
                                     <li>bootstrap</li>
@@ -36,17 +37,17 @@ class Skill extends Component{
                                     <li>SCSS</li>
                                 </ul>
                             </li>
-                            <li className='skillrow'>
-                                <span>version control systems</span>
-                                <ul>
+                            <li className='skillrow d-flex flex-column flex-md-row'>
+                                <span className='col-md-4'>version control systems</span>
+                                <ul className='col-md-8 justify-content-md-end justify-content-start'>
                                     <li>git</li>
                                     <li>svn</li>
                                     <li>microsoft TFS</li>
                                 </ul>
                             </li>
-                            <li className='skillrow'>
-                                <span>methodology and tools used</span>
-                                <ul>
+                            <li className='skillrow d-flex flex-column flex-md-row'>
+                                <span className='col-md-4'>methodology and tools used</span>
+                                <ul className='col-md-8 justify-content-md-end justify-content-start'>
                                     <li>agile methodology</li>
                                     <li>jira</li>
                                     <li>confluence</li>

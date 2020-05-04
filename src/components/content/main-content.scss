@@ -1,0 +1,91 @@
+@import '../../common/styles/variables.scss';
+
+main{
+    padding-left: 300px;
+    box-sizing: border-box;
+    width: 100%;
+
+    .section {
+      padding: 20px 0 0 0;
+      color: $white-Color;
+      overflow-x: hidden;
+      min-height: 100vh;
+
+      .sectionWrapper{
+        &.blackFont{
+          color: $black-color;
+
+          p.description::after{
+            background: $black-color;
+          }          
+        }
+        h1 {
+          font-size: 75px;
+          text-align: center;
+          text-transform: uppercase;
+          margin: 0 0 25px 0;
+          transition: all .5s ease;
+        }
+
+        p.description {
+          width: 60%;
+          margin: 0 auto;
+          font-size: 17px;
+          font-weight: bold;
+          text-align: center;
+          position: relative;
+          padding: 0 0 41px 0;
+          font-weight: 200;
+
+          &::after {
+            content: "";
+            width: 300px;
+            height: 1px;
+            position: absolute;
+            bottom: 0px;
+            left: calc(50% - 150px);
+            background: $white-Color;
+          }
+        }
+
+        .content{
+        
+          .card{
+            background: $white-Color;
+            color: $black-color;
+            font-weight: 700;
+            text-transform: capitalize;
+            padding: 20px;
+            box-shadow: $box-shadow;
+            border: 1px solid $grey-shade;
+            border-radius: $border-radius;
+            margin: 50px 0 50px 100px;
+
+            ul li {
+              padding: 10px 0;
+
+              &:first-child{
+                font-size: 24px;
+                margin: 0 0 10px 0;
+                border-bottom: 1px solid $black-color;
+                padding: 0 0 5px 0;
+                font-weight: bold;
+              }
+
+              span{
+                &:first-child{
+                  margin: 0 10px 0 0;
+                  &::after{
+                    content: ":";
+                    margin: 0 10px;
+                  }
+                }
+              }
+              
+            }
+          }
+          
+        }
+      }
+    }
+  }

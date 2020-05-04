@@ -6,31 +6,25 @@ import Experience from './experience/experience';
 import Education from './education/education';
 import Contact from './contact/contact';
 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 class Maincontent extends Component{
     constructor(){
         super();
     }
-    skills = {
-        
-    }
-    personalDetails = {
-        name: 'sharad jain',
-        email: 'sharadjain3010@gmail.com',
-        phone: '7898271531',
-        dob: '30/10/1993',
-        nationality: 'indian'
-    }
 
     render(){
         return (
-            <main>
-                <AboutUs></AboutUs>
-                <Skill></Skill>
-                <Experience></Experience>
-                <Education></Education>
-                <Contact></Contact>
-            </main>
+                <main className=''> 
+                    <Switch>
+                        <Route path='/' exact component={AboutUs}/>
+                        <Route path='/Skill'  component={Skill}/>
+                        <Route path='/Experience'  component={Experience}/>
+                        <Route path='/Education'  component={Education}/>
+                        <Route path='/Contact'  component={Contact}/>
+                    </Switch>
+                </main>
         );
     }
 }

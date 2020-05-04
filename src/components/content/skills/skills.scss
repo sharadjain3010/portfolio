@@ -1,0 +1,34 @@
+@import '../../../common/styles/variables.scss';
+
+#skills {
+      background-color: $bg-color-shade2;
+      
+  .skills{
+      margin: 40px 20px;
+
+      ul li.skillrow{
+        margin: 10px 0;
+        // display: flex;
+        // justify-content: space-between;
+
+        span{
+          font-family: 'roboto-bold';
+          text-transform: capitalize;
+          // margin: 0 20px 0 0;
+          font-size: 17px;
+        }
+
+        ul{
+          display: flex ;
+          flex-wrap: wrap;
+
+          li{
+            border: 1px solid $white-Color;
+            padding: 5px 10px;
+            margin: 0 10px 0 0;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }

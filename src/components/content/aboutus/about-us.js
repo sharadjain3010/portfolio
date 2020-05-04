@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './about-us.scss';
 
 class AboutUs extends Component{
     constructor(){
@@ -35,7 +36,7 @@ class AboutUs extends Component{
                                     <label>indian</label>
                                 </li>
                             </ul>
-                            <a href="../../assets/Sharad_Jain.pdf" download className="downloadButton">download resume</a>
+                            <a href="src/assets/Images/userImage.jpg" download className="downloadButton">download resume</a>
                         </div>
                         <div className="userImg col-sm-12 col-md-6">
                             <label></label>

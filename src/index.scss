@@ -38,395 +38,118 @@
   box-sizing: border-box;
 }
 
-.App{
-  display: flex;
+body{
+  .App{
+    display: flex;
 
-  ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  button{
-    background: none;
-    border: 0;
-  }
-  a{
-    text-decoration: none;
-  }
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    button{
+      background: none;
+      border: 0;
+    }
+    a{
+      text-decoration: none;
+    }
 
-  .blackFont{
-    color: $black-color;
-  }
-  .whiteFont{
-    color: $white-Color;
-  }
-  .whiteBG {
-    background: $white-Color;
-  }
-  .blackBG {
-    background: $black-color;
-  }
+    .blackFont{
+      color: $black-color;
+    }
+    .whiteFont{
+      color: $white-Color;
+    }
+    .whiteBG {
+      background: $white-Color;
+    }
+    .blackBG {
+      background: $black-color;
+    }
 
-  .hamburger{
-    width: 35px;
-    background: transparent;  
-    position: absolute;
-    top: 50px;
-    right: 0;
-    transform: translateX(55px);
-    z-index: 99;
-    &.close{
-      span:nth-child(1){
-        transform: rotateZ(55deg) translateX(6px);
-        transform-origin: center;
-      }
-      span:nth-child(2){
+    .hamburger{
+      width: 35px;
+      background: transparent;  
+      position: absolute;
+      top: 30px;
+      right: 0;
+      transform: translateX(55px);
+      z-index: 99;
+      display: inline-block;
+
+      @media only screen and(min-width: 992px){
         display: none;
       }
-      span:nth-child(3){
-        transform-origin: center;
-        transform: rotateZ(-45deg) translateX(5px);
+     
+      span{
+        width: 100%;
+        height: 3px;
+        background: $black-color;
+        display: block;
+        margin: 5px 0;
+        transition: transform .3s ease;
       }
-    }
-    span{
-      width: 100%;
-      height: 3px;
+    }   
+    
+    .backdrop{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       background: $black-color;
-      display: block;
-      margin: 5px 0;
-      transition: transform .3s ease;
+      opacity: .6;
+      display: none;
     }
-  }
-
-
-  .navbar {
-    padding: 50px 25px;
-    border: 0px solid transparent;
-    width: 300px;
-    align-items: flex-start;
-    position: fixed;
-    z-index: 9;
 
     &.mobile{
-      position: fixed;
-      min-height: 100%;
-      z-index: 9;
-      background: $white-Color;
-      width: 300px;
-      transform: translateX(-100%);
-      transition: transform .3s ease;
-    }
-    &.mobile.open{
-      transform: translateX(0px);
-    }
 
-    .navbar-brand {
-      color: $black-color;
-      padding: 0;
-      text-transform: capitalize;
-    }
-    
-    .navbar-brand span {
-      color: $white-Color;
-      border: 1px solid $bg-color-shade2;
-      background: $bg-color-shade2;
-      padding: 7px 10px;
-      text-transform: uppercase;
-    }
-
-    .navbar-nav{
-      margin: 30px 0 45px 0;
-      width: 100%;
-
-     li>a,
-     li>a:hover {
-        font-family: 'Roboto-Bold', sans-serif;
-        font-size: 14px;
-        display: block;
-        color: $black-color;
-        text-transform: uppercase;
-        border-bottom: 1px solid $grey-shade;
-        padding: 15px 15px 15px 25px;
-        position: relative;
+      nav.navbar{
+        position: fixed;
+        min-height: 100%;
+        z-index: 9;
+        background: $white-Color;
+        width: 300px;
+        transform: translateX(-100%);
+        transition: transform .3s ease;
       }
+      nav.navbar.open{
+        transform: translateX(0px);
 
-     li>a::before {
-        content: "";
-        width: 10px;
-        height: 2px;
-        position: absolute;
-        display: inline-block;
-        background: $bg-color-shade4;
-        top: 25px;
-        left: 0;
-        transition: all .3s ease;
-      }
-
-     li.active>a::before,
-     li>a:hover::before {
-        width: 100%;
-        height: 1px;
-        transition: all .3s ease;
-      }
-
-    }
- 
-    .socialLinks {
-      text-align: center;
-    }
-
-    
-    .fa {
-      padding: 10px;
-      font-size: 15px;
-      min-width: 32px;
-      text-align: center;
-      text-decoration: none;
-      margin: 0px 6px;
-      text-decoration: none;
-      border: 1px solid $white-Color;
-    }
-
-    .fa-facebook,
-    .fa-google,
-    .fa-linkedin {
-      background: $white-Color;
-      color: #01a2a6;
-      transition: all .3s ease;
-      border: 1px solid #01a2a6;
-    }
-
-    a.fa.fa-linkedin:hover,
-    a.fa.fa-facebook:hover,
-    a.fa.fa-google:hover,
-    a.fa.fa-linkedin:focus,
-    a.fa.fa-facebook:focus,
-    a.fa.fa-google:focus {
-      color: $white-Color;
-      background: #01a2a6;
-      text-decoration: none;
-      transition: all .3s ease;
-    }
-
-  }
-  main{
-    padding-left: 300px;
-    box-sizing: border-box;
-
-    .section {
-      padding: 20px 0 0 0;
-      color: $white-Color;
-      overflow-x: hidden;
-      min-height: 100vh;
-
-      .sectionWrapper{
-        &.blackFont{
-          color: $black-color;
-
-          p.description::after{
-            background: $black-color;
-          }          
-        }
-        h1 {
-          font-size: 75px;
-          text-align: center;
-          text-transform: uppercase;
-          margin: 0 0 25px 0;
-          transition: all .5s ease;
-        }
-
-        p.description {
-          width: 60%;
-          margin: 0 auto;
-          font-size: 17px;
-          font-weight: bold;
-          text-align: center;
-          position: relative;
-          padding: 0 0 41px 0;
-          font-weight: 200;
-
-          &::after {
-            content: "";
-            width: 300px;
-            height: 1px;
-            position: absolute;
-            bottom: 0px;
-            left: calc(50% - 150px);
-            background: $white-Color;
-          }
-        }
-
-        .content{
-
-          &.contact{
-            text-align: center;
-            padding: 40px 40px;
-
-            .controls{
-              display: block;
-              width: 60%;
-              margin: 20px auto;
-              padding: 10px 10px;
-              border-radius: $border-radius;
-            }
-            button{
-              text-transform: uppercase;
-              font-size: 25px;
-              color: $white-Color;
-              border: 1px solid $white-Color;
-              font-weight: bold;
-            }
-            textarea{
-              height:  150px;
-            }
-          }
-         
-          .card{
-            background: $white-Color;
-            color: $black-color;
-            font-weight: 700;
-            text-transform: capitalize;
-            padding: 20px;
-            box-shadow: $box-shadow;
-            border: 1px solid $grey-shade;
-            border-radius: $border-radius;
-            margin: 50px 0 50px 100px;
-
-            ul li {
-              padding: 10px 0;
-
-              &:first-child{
-                font-size: 24px;
-                margin: 0 0 10px 0;
-                border-bottom: 1px solid $black-color;
-                padding: 0 0 5px 0;
-                font-weight: bold;
-              }
-
-              span{
-                &:first-child{
-                  margin: 0 10px 0 0;
-                  &::after{
-                    content: ":";
-                    margin: 0 10px;
-                  }
-                }
-              }
-              
-            }
-          }
-
+        .hamburger{
+          transform: translateX(38px) rotate3d(1, 1, 1, -14deg);
           
-          &.skills{
-            margin: 40px 20px;
-
-            ul li.skillrow{
-              margin: 10px 0;
-              display: flex;
-              justify-content: space-between;
-
-              span{
-                font-family: 'roboto-bold';
-                text-transform: capitalize;
-                margin: 0 20px 0 0;
-              }
-
-              ul{
-                display: flex ;
-                flex-wrap: wrap;
-
-                li{
-                  border: 1px solid $white-Color;
-                  padding: 5px 10px;
-                  margin: 0 10px 0 0;
-                  text-transform: uppercase;
-                }
-              }
+            span:nth-child(1){
+              transform: rotateZ(55deg) translateX(6px);
+              transform-origin: center;
             }
-          } 
-
-          &.userInfo{
-            color: $black-color;
-            text-transform: capitalize;
-            display: flex;
-
-            .userDetail{
-
-              ul {
-                padding: 0;
-                list-style: none;
-                margin: 100px 100px 50px 100px;
-  
-                li {
-                  padding: 10px 0 10px 0;
-                  border-bottom: 1px solid #dedede;
-                  display: flex;
-
-                  label {
-                    width: 50%;
-                    font-weight: 600;
-                  }
-                }
-              }
-
-              a.downloadButton {
-                margin: 10px 0 0 100px;
-                text-transform: uppercase;
-                text-decoration: none;
-                border: 1px solid $black-color;
-                padding: 13px 50px;
-                color: $black-color;
-                font-family: 'Roboto-Bold', sans-serif;
-                font-size: 16px;
-                transition: background .3s ease, color .3s ease;
-
-                &:hover,
-                &:focus {
-                  color: $white-Color;
-                  background: $black-color;
-                  transition: all .3s ease;
-                }
-              }
+            span:nth-child(2){
+              display: none;
             }
-
-            .userImg {
-              width: 50%;
-              margin: 0 0 35px 0;
-              vertical-align: text-top;
-              padding: 48px 0 0 106px;
-
-              label {
-                background: url(./assets/Images/userImage.jpg) no-repeat;
-                width: 400px;
-                height: 400px;
-                background-position: 84% 18%;
-                display: inline-block;
-                background-size: 179% 119%;
-                border-radius: 10px;
-              }
+            span:nth-child(3){
+              transform-origin: center;
+              transform: rotateZ(-45deg) translateX(5px);
             }
-          }
+          
         }
       }
+  
+      main{
+        padding: 0;
+      }
+      
+      .backdrop{
+        display: block;
+      }
+
+      
+  
     }
 
-    #intro {
-      background-color: $bg-color-shade1;
-      position: relative;
-    }
-    #skills,
-    #contact {
-      background-color: $bg-color-shade2;
-    }
-    #experience{
-      background-color: $bg-color-shade3;
-    }
-    
-    #education {
-      background-color: $bg-color-shade4;
-    }
-    
   }
-  
+ 
+
+ 
 }
 
