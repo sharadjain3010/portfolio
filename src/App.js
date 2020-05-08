@@ -26,7 +26,7 @@ class App extends Component {
     return(
       <>
       <div className={`App ${isMobileOn ? 'mobile' : ''}`}>
-        <Router>
+        <Router basename='/portfolio'>
           <Navigation isMobile={this.state.isMobileOn}/>
           <Maincontent />
         </Router>
