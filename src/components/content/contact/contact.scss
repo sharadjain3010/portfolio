@@ -9,14 +9,18 @@
 
       .controls{
         display: block;
-        width: 60%;
+        width: 100%;
         margin: 20px auto;
         padding: 10px 10px;
         border-radius: $border-radius;
+
+        @media only screen and (min-width: 768px){
+          width: 600px;
+        }
       }
       button{
         text-transform: uppercase;
-        font-size: 25px;
+        font-size: 20px;
         color: $white-Color;
         border: 1px solid $white-Color;
         font-weight: bold;

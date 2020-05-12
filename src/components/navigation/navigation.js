@@ -46,8 +46,9 @@ class Navigation extends Component {
                         
                             <li><Link to='/'>About Me</Link></li>
                             <li><Link to='/Skill'>Skills</Link></li>
-                            <li><Link to='/Experience'>Employment</Link></li>
-                            <li><Link to='/Education'>Education</Link></li>
+                            <li><Link to='/Experience'>Experience</Link></li>
+                            {/* <li><Link to='/Education'>Education</Link></li> */}
+                            {/* <li><Link to='/'>works</Link></li> */}
                             <li><Link to='/Contact'>Contact</Link></li>
                         </ul>
                         <div className="socialLinks">

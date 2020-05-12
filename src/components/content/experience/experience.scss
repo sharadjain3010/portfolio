@@ -2,4 +2,66 @@
 
 #experience{
     background-color: $bg-color-shade3;
+    
+    .timeLine{
+      display: flex;
+      flex-direction: column;
+
+      .timelineContent{
+        display: flex;
+
+        .duration{
+          text-transform: capitalize;
+          margin: 0;
+
+          &::after{
+            width: 2px;
+            background: $black-color;
+            content: '';
+            width: 1px;
+            display: inline-block;
+            height: 100%;
+            margin: 0 30px;
+          }
+        }
+
+        .card{
+            background: $white-Color;
+            color: $black-color;
+            font-weight: 700;
+            text-transform: capitalize;
+            padding: 20px;
+            box-shadow: $box-shadow;
+            border: 1px solid $grey-shade;
+            border-radius: $border-radius;
+            width: 350px;
+            margin: 0 0 40px 0;
+
+            ul li {
+              padding: 5px 0;
+              font-size: 14px;
+
+              &:first-child{
+                font-size: 20px;
+                margin: 0 0 10px 0;
+                border-bottom: 1px solid $black-color;
+                padding: 0 0 5px 0;
+                font-weight: bold;
+              }
+
+              span{
+                &:first-child{
+                  margin: 0 10px 0 0;
+                  &::after{
+                    content: ":";
+                    margin: 0 10px;
+                  }
+                }
+              }
+              
+            }
+          }
+  
+      }
+    }
   }
