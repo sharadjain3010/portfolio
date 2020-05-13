@@ -10,6 +10,7 @@ main{
       color: $white-Color;
       overflow-x: hidden;
       min-height: 100vh;
+      animation: pageLoad .5s cubic-bezier(.26,.15,.19,1.49);
 
       .sectionWrapper{
         &.blackFont{
@@ -62,5 +63,14 @@ main{
         }
         
       }
+    }
+  }
+  @keyframes pageLoad{
+    0%{
+      transform: translateY(200px);
+    }
+    100%{
+      transform: translateY(0px);
+      
     }
   }

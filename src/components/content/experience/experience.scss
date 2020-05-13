@@ -9,10 +9,13 @@
 
       .timelineContent{
         display: flex;
+        margin: 0 auto;
 
         .duration{
           text-transform: capitalize;
-          margin: 0;
+          margin: 0 25px 0 0;
+          width: 81px;
+          font-size: 14px;
 
           &::after{
             width: 2px;
@@ -20,7 +23,7 @@
             content: '';
             width: 1px;
             display: inline-block;
-            height: 100%;
+            height: calc(100% - 54px);
             margin: 0 30px;
           }
         }

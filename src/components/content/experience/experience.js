@@ -14,10 +14,24 @@ class Experience extends Component{
                     <p className="description">I have an experience working with enterprise level web applications with latest web technologies and web standards and sucessfully completed several projects while working for organizations.</p>
                     <div className='content row timeLine'>
                         <div className='timelineContent'>
-                            <label className="duration">april 2020</label>
+                            <label className="duration">apr 2020 - till now</label>
                             <div className="card" >
                                 <ul>
-                                    <li>cognizant technology solutions</li>
+                                    <li>Deloitte</li>
+                                    <li><span>experience</span>
+                                        <span>1 yr</span></li>
+                                    <li><span>technology</span>
+                                        <span>front end development</span></li>
+                                    <li><span>position</span>
+                                        <span>Senior front end developer</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className='timelineContent'>
+                            <label className="duration">Jun 2019 - apr 2020</label>
+                            <div className="card" >
+                                <ul>
+                                    <li>Cognizant technology solutions</li>
                                     <li><span>experience</span>
                                         <span>1 yr</span></li>
                                     <li><span>technology</span>
@@ -28,7 +42,7 @@ class Experience extends Component{
                             </div>
                         </div>
                         <div  className='timelineContent'>
-                            <label className="duration">april 2020</label>
+                            <label className="duration">Feb 2016 - Apr 2019</label>
                             <div className="card" >
                                 <ul>
                                     <li>tata consultancy sevices</li>
@@ -42,8 +56,8 @@ class Experience extends Component{
                             </div>
                        </div>
                         <div className='timelineContent'>
-                            <label className="duration">april 2020</label>
-                            <div className='card col-sm-12 col-md-6 '>
+                            <label className="duration">2011-2015</label>
+                            <div className='card '>
                                 <ul>
                                     <li>graduation</li>
                                     <li><span>college</span>
